@@ -36,11 +36,22 @@ function kangaroo(kanga1, rate1, kanga2, rate2) {
     if (kanga2 < kanga1 && rate2 < rate1) {
         return false;
     }
-    for (i = 0; i < 100; i++) {
-        kanga1 = kanga1 + rate1;
-        kanga2 = kanga2 + rate2;
-        if (kanga1 == kanga2) {
-            return true;
+    if (kanga1 >= kanga2 && rate2 >= rate1) {
+        while (kanga2 < kanga1) {
+            kanga1 = kanga1 + rate1;
+            kanga2 = kanga2 + rate2;
+            if (kanga1 == kanga2) {
+                return true;
+            }
+        }
+    }
+    if (kanga2 >= kanga1 && rate1 >= rate2) {
+        while (kanga1 < kanga2) {
+            kanga1 = kanga1 + rate1;
+            kanga2 = kanga2 + rate2;
+            if (kanga1 == kanga2) {
+                return true;
+            }
         }
     }
     return false;
