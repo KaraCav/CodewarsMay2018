@@ -56,3 +56,18 @@ function kangaroo(kanga1, rate1, kanga2, rate2) {
     }
     return false;
 }
+// NUMBER 3: Disarium number is the number that The sum of its digits powered with their respective positions is equal to the number itself. Given a number, return 'Disarium' or 'Not'.
+function disariumNumber(n) {
+    var numStr = n.toString();
+    var nNum = 0;
+    for (var i = 1; i < numStr.length + 1; i++) {
+        nNum = nNum + (Math.pow(numStr[i - 1], i));
+        console.log(nNum);
+    }
+    if (nNum == n) {
+        return "Disarium !!";
+    }
+    else {
+        return "Not !!";
+    }
+}
