@@ -80,3 +80,14 @@ function disariumNumber(n) {
         ? "Disarium !!"
         : "Not !!"
 }
+
+// NUMBER 4: You get an array of numbers, return the sum of all of the positives ones.
+function positiveSum(arr) {
+    var mySum = 0;
+    for (i = 0; i < arr.length; i++) {
+        if (arr[i] > 0) {
+            mySum = mySum + arr[i];
+        }
+    }
+    return mySum;
+}
