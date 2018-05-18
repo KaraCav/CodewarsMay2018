@@ -134,3 +134,8 @@ function rowWeights(array) {
     let t2 = array.filter((x, i) => i % 2 != 0).reduce((a, item) => a + item, 0);
     return [t1, t2]
 }
+
+// NUMBER 7: A Tidy number is a number whose digits are in non-decreasing order.
+function tidyNumber(n) {
+    //your code here
+}
