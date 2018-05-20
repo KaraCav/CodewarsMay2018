@@ -147,3 +147,7 @@ function tidyNumber(n) {
     }
     return true;
 }
+//OR can do:
+function tidyNumber(n) {
+    return [...n += ""].sort().join`` == n
+}
