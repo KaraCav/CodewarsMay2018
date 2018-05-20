@@ -137,5 +137,13 @@ function rowWeights(array) {
 
 // NUMBER 7: A Tidy number is a number whose digits are in non-decreasing order.
 function tidyNumber(n) {
-    //your code here
+    nArr = n.toString();
+    console.log(Array.from(nArr));
+    for (let i = 0; i < nArr.length; i++) {
+        console.log(typeof (Number(nArr[i])));
+        if (Number(nArr[i]) > Number(nArr[i + 1])) {
+            return false;
+        }
+    }
+    return true;
 }
