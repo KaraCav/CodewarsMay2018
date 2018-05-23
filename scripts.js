@@ -151,3 +151,18 @@ function tidyNumber(n) {
 function tidyNumber(n) {
     return [...n += ""].sort().join`` == n
 }
+
+// NUMBER 8: Given an array of N integers, you have to find how many times you have to add up the smallest numbers in the array until their Sum becomes greater or equal to K.
+
+function minimumSteps(numbers, value) {
+    let equalValue = 0;
+    let iterationNum = 0
+    let newNums = numbers.sort(function (a, b) { return a - b });
+    for (let i = 0; i <= newNums.length; i++) {
+        if (equalValue < value) {
+            equalValue = equalValue + newNums[i];
+            iterationNum = iterationNum + 1;
+        }
+        else { return iterationNum - 1 }
+    }
+}
