@@ -166,3 +166,5 @@ function minimumSteps(numbers, value) {
         else { return iterationNum - 1 }
     }
 }
+
+// NUMBER 9: Write a function that takes an integer and returns an array [A, B, C], where A is the number of multiples of 3 below the given integer, B is the number of multiples of 5, and C is the number of multiples of both below the given integer.
