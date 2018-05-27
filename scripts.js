@@ -168,3 +168,20 @@ function minimumSteps(numbers, value) {
 }
 
 // NUMBER 9: Write a function that takes an integer and returns an array [A, B, C], where A is the number of multiples of 3 below the given integer, B is the number of multiples of 5, and C is the number of multiples of both below the given integer.
+function solution(number) {
+    let A = 0;
+    let B = 0;
+    let C = 0;
+    for (let i = 1; i < number; i++) {
+        if (i % 15 === 0) {
+            C = C + 1;
+        }
+        else if (i % 3 === 0) {
+            A = A + 1;
+        }
+        else if (i % 5 === 0) {
+            B = B + 1;
+        }
+    }
+    return [A, B, C];
+}
