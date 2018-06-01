@@ -185,3 +185,15 @@ function solution(number) {
     }
     return [A, B, C];
 }
+
+// NUMBER 10: Your goal in this kata is to implement a difference function, which subtracts one list from another and returns the result. Remove all values from list a which are present in list b.
+
+function array_diff(a, b) {
+    let uniqueArr = [];
+    for (let i = 0; i < a.length; i++) {
+        if (b.indexOf(a[i]) < 0) {
+            uniqueArr.push(a[i]);
+        }
+    }
+    return uniqueArr;
+}
